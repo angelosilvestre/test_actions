@@ -38,10 +38,10 @@ jobs:
         run: dart pub global run code2docs_cli:code2docs samples -o output
 
       # Runs a set of commands using the runners shell
-      - name: List files
+      - name: List generated files
         run: |
-         for file in $(ls -d -1 samples/*) 
+         for file in $(ls -d -1 output/*) 
          do
-           echo "next file"
+           echo "File generated:"
            echo $file
          done
