@@ -25,6 +25,8 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v3
       - uses: dart-lang/setup-dart@v1.3
+        with:
+          sdk: 2.19.0-467.0.dev
 
       # Runs a single command using the runners shell
       - name: Run a one-line script
