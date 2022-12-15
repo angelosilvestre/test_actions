@@ -32,7 +32,8 @@ jobs:
       # Runs a set of commands using the runners shell
       - name: List files
         run: |
-         for file in $(ls -d -1 samples/*) do
+         for file in $(ls -d -1 samples/*) 
+         do
            echo "next file"
            echo $file
          done
