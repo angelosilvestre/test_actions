@@ -32,7 +32,7 @@ jobs:
         
       # get the cli
       - name: Install cli
-        run: dart pub global activate code2docs
+        run: dart pub global activate code2docs_cli
         
       - name: Generate markdown files
         run: dart pub global run code2docs_cli:code2docs samples -o output
