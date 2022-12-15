@@ -44,4 +44,5 @@ jobs:
          do
            echo "File generated:"
            echo $file
+           cat $file
          done
