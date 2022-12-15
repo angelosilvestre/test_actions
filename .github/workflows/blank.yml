@@ -26,5 +26,7 @@ jobs:
          for file in $(ls -d -1 output/*) 
          do
            echo "uploading file $file"
-
-         done
+           sh ./upload_sample.sh $file
+         done        
+        env:
+          PASTEBIN_API_DEV_KEY: ${{ secrets.PASTEBIN_API_DEV_KEY }}
