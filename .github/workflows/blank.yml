@@ -33,6 +33,9 @@ jobs:
       # get the cli
       - name: Install cli
         run: dart pub global activate code2docs
+        
+      - name: Generate markdown files
+        run: dart pub global run code2docs_cli:code2docs samples -o output
 
       # Runs a set of commands using the runners shell
       - name: List files
