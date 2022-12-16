@@ -16,17 +16,17 @@ jobs:
       - uses: dart-lang/setup-dart@v1.3
 
       - name: Install cli
-        run: dart pub global activate code2docs_cli
+        run: dart pub global activate code2docs
         
       - name: Generate markdown files
-        run: dart pub global run code2docs_cli:code2docs samples -o output        
+        run: dart pub global run code2docs -i samples -o output        
 
       - name: Upload files
         run: |
          for file in $(ls -d -1 output/*) 
          do
-           echo "uploading file $file"
-           sh ./upload_sample.sh $file
+           echo "uploading file $file"   
+           #sh ./upload_sample.sh $file
          done        
         env:
           PASTEBIN_API_DEV_KEY: ${{ secrets.PASTEBIN_API_DEV_KEY }}
