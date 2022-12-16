@@ -19,7 +19,7 @@ jobs:
         run: dart pub global activate code2docs
         
       - name: Generate markdown files
-        run: dart pub global run code2docs -i samples -o output        
+        run: dart pub global run code2docs generate -i samples -o output        
 
       - name: Upload files
         run: |
